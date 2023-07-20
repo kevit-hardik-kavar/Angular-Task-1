@@ -1,0 +1,103 @@
+ html,body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.outer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box{
+    width: 50%;
+    margin-top: 50px;
+    padding: 10px;
+    height: 500px;
+}
+
+.tasks-list{
+    max-height: 300px;
+    overflow-y: scroll;
+    
+}
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+    overflow: hidden;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+.task-list{
+    position: relative;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 8px;
+    margin: 10px 5px;
+    
+}
+ ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+li{
+    text-decoration: none;
+}
+.fa{
+    position: absolute;
+    top: 14px;
+    right: 19px;
+    z-index: 10;
+    cursor: pointer;
+    display: none;
+}
+.task-list:hover{
+    .fa{
+        display: block;
+    }
+} 
+.addtask-area{
+    position: relative;
+}
+.addtask-area input{
+    width: 100%;
+    padding: 8px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+}
+.addtask-btn {
+    position: absolute;
+    top: 21%;
+    right: 4%;
+    background: none;
+    border: none;
+    font-size: 12px;
+    font-weight: 500;
+    border: 0.5px solid grey;
+    border-radius: 5px;
+}
+.edit-input{
+    width: 100%;
+    border: none;
+    outline: none;
+}
+ 
+  
+  
+  
+  
+  

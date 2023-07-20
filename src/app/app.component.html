@@ -1,0 +1,35 @@
+<div class="outer">
+  <div class="box">
+    <h2>Task Manager</h2>
+    <div class="tasks-list" *ngIf="taskArray.length > 0">
+      <ul class="task-list" *ngFor="let task of taskArray; let i = index">
+        <div class="task" *ngIf="isEdit !== i; else inputForm">
+          <li class="">{{ task }}</li>
+          <span (click)="onEdit(i)"><i class="fa fa-pencil mx-4"></i></span>
+          <span (click)="onDelete(i)"><i class="fa fa-trash"></i></span>
+        </div>
+        <ng-template #inputForm>
+          <input
+            type="text"
+            autofocus="true"
+            class="edit-input"
+            [(ngModel)]="updatedValue"
+            value="{{ updatedValue }}"
+            (keyup.enter)="onKeyUp($event)"
+          />
+        </ng-template>
+      </ul>
+    </div>
+    <div class="addtask-area">
+      <div class="addtask-form">
+        <input
+          type="text"
+          placeholder="Add Task..."
+          [(ngModel)]="taskName"
+          class=""
+        />
+        <button class="addtask-btn" (click)="onAddTask()">save</button>
+      </div>
+    </div>
+  </div>
+</div>
