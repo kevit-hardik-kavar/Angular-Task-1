@@ -1,8 +1,4 @@
- html,body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
+
 .outer{
     display: flex;
     justify-content: center;
@@ -11,7 +7,6 @@
 .box{
     width: 50%;
     margin-top: 50px;
-    padding: 10px;
     height: 500px;
 }
 
@@ -45,7 +40,11 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 8px;
     margin: 10px 5px;
+    border: 1px solid #ddd;
     
+}
+.task-list:first-child{
+    margin-top: 0px;
 }
  ul {
     list-style-type: none;
@@ -70,6 +69,7 @@ li{
 } 
 .addtask-area{
     position: relative;
+    margin-top: 3px;
 }
 .addtask-area input{
     width: 100%;
@@ -78,9 +78,11 @@ li{
     border: none;
     border-radius: 10px;
     outline: none;
+    padding-right: 70px;
 }
 .addtask-btn {
     position: absolute;
+    cursor: pointer;
     top: 21%;
     right: 4%;
     background: none;
@@ -90,6 +92,7 @@ li{
     border: 0.5px solid grey;
     border-radius: 5px;
 }
+
 .edit-input{
     width: 100%;
     border: none;
